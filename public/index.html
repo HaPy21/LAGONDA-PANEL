@@ -5,6 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <link rel="shortcut icon" href="<%= BASE_URL %>assets/favicon/favicon.ico" type="image/x-icon"/>
+    
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <link rel="stylesheet" href="<%= BASE_URL %>assets/css/libs.bundle.css" />
+    
+    <link rel="stylesheet" href="<%= BASE_URL %>assets/css/theme.bundle.css" id="stylesheetLight" />
+    <link rel="stylesheet" href="<%= BASE_URL %>assets/css/theme-dark.bundle.css" id="stylesheetDark" />
+    
+    <style>
+      @font-face {
+        font-family: 'cerebrisans';
+        src: url('<%= BASE_URL %>assets/fonts/cerebrisans/cerebrisans-regular.woff');
+      }
+      *{
+        font-family: 'cerebrisans';
+      }
+      .modal-backdrop {
+        background-color: #12263f4d !important;
+      }
+    </style>
+
+
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -12,6 +36,10 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script src="<%= BASE_URL %>assets/js/vendor.bundle.js"></script>
+    <script src="<%= BASE_URL %>assets/js/theme.bundle.js"></script>
   </body>
 </html>
