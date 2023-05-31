@@ -93,6 +93,11 @@
                 <i class="fe fe-package"></i> Productos
               </router-link>
             </li>
+            <li class="nav-item">
+              <router-link to="/Ventas" class="nav-link" active-class="active">
+                <i class="fe fe-package"></i> Ventas
+              </router-link>
+            </li>
           </ul>
     
           <!-- Push content down -->

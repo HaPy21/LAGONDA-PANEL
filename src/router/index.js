@@ -8,6 +8,8 @@ import EditarUsuarioPanel from '../views/UsuarioPanel/EditarUsuarioPanel.vue'
 
 import CreateProductoPanel from '../views/ProductosPanel/CreateProductoPanel.vue'
 import ListarProductosPanel from '../views/ProductosPanel/ListarProductosPanel.vue'
+import ListadoVentas from '../views/Ventas/ListadoVentas.vue'
+import DetalleVenta from '../views/Ventas/DetalleVenta.vue'
 import Dashboard from '../views/dashboard.vue'
 import store from '@/store'
 import jwtDecode from 'jwt-decode'
@@ -24,7 +26,9 @@ const routes = [
   { path: '/about', name: 'about'},
   //Productos
   { path: '/ProductoPanel/create', name: 'CreateProductoPanel', component: CreateProductoPanel,meta: { requiresAuth: true }},
-  { path: '/ProductoPanel', name: 'ListarProductosPanel', component: ListarProductosPanel,meta: { requiresAuth: true }}
+  { path: '/ProductoPanel', name: 'ListarProductosPanel', component: ListarProductosPanel,meta: { requiresAuth: true }},
+  { path: '/Ventas', name: 'ListadoVentas', component: ListadoVentas,meta: { requiresAuth: true }},
+  { path: '/DetalleVentas', name: 'DetalleVentas', component: DetalleVenta,meta: { requiresAuth: False }}
 ]
 
 const router = new VueRouter({
